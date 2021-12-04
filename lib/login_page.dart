@@ -81,7 +81,6 @@ class _LoginPageState extends State<LoginPage> {
                   focusedBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: greenColor),
                   )),
-              obscureText: true,
               onChanged: (value) {
                 this.email = value;
               },
