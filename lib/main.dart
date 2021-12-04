@@ -1,18 +1,33 @@
 //import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:recetaapp/login_page.dart';
 
 import 'menu.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  // await Firebase.initializeApp();
   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: MyApp()));
 }
 
-class MyApp extends StatefulWidget {
+class MyApps extends StatefulWidget {
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<MyApps> createState() => _MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LoginPage(),
+    );
+  }
+}
+
+class _MyAppState extends State<MyApps> {
   //final navigationKey = GlobalKey<CurvedNavigationBarState>();
   int index = 0;
 
