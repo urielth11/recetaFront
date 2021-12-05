@@ -5,6 +5,7 @@ import 'package:recetaapp/login_page.dart';
 import 'package:recetaapp/error_handler.dart';
 import 'package:recetaapp/menu.dart';
 
+import '../main.dart';
 import '../menu.dart';
 
 class AuthService {
@@ -14,7 +15,7 @@ class AuthService {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (BuildContext context, snapshot) {
           if (snapshot.hasData) {
-            return Menu();
+            return MyApp();
           } else
             return LoginPage();
         });

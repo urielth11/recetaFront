@@ -33,9 +33,9 @@ class Menu extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.all(1),
                 ),
-                SizedBox(
-                  height: 15,
-                ),
+                /*SizedBox(
+                  //height: 5,
+                ),*/
                 CarouselSlider(
                   items: crearItems(todoData),
                   options: CarouselOptions(
